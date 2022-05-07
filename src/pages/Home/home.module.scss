@@ -1,0 +1,9 @@
+.items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .item{
+        width: 22%;
+        margin: 40px;
+    }
+}
