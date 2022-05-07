@@ -1,7 +1,11 @@
 .items{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     .item{
         width: 22%;
         margin: 40px;

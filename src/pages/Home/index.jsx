@@ -14,7 +14,7 @@ export const Home = () => {
   React.useEffect(() => {
     dispatch(fetchMovies(page));
   }, []);
-  
+
   if (loading) {
     return (
       <div>
@@ -24,18 +24,23 @@ export const Home = () => {
   }
   return (
     <div className={s.items}>
-      {movies.map((v) => (
-        <div
-          onClick={() => history.push(`/movie/${v.id}`)}
-          key={v.id}
-          className={s.item}
-        >
-          <img src={v.files.poster_url} alt="photo" />
-          <h4>{v.title}</h4>
-          <p>{v.year}</p>
+      <div className="container">
+        <div className={s.inner}>
+          {(movies.length || <div>Not films</div>) &&
+            movies.map((v) => (
+              <div
+                onClick={() => history.push(`/movie/${v.id}`)}
+                key={v.id}
+                className={s.item}
+              >
+                <img src={v.files.poster_url} alt="pho" />
+                <h4>{v.title}</h4>
+                <p>{v.year}</p>
+              </div>
+            ))}
+          <PaginationControlled />
         </div>
-      ))}
-      <PaginationControlled />
+      </div>
     </div>
   );
 };

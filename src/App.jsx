@@ -1,5 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.scss';
+import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { Movie } from './pages/Movie/index';
 
@@ -7,7 +8,7 @@ import { Movie } from './pages/Movie/index';
 function App() {
   return (
     <div className="App">
-          <h2>Navbar</h2>
+          <Header/>
           <Switch>
             <Route path="/" component={Home} exact/>
             <Route path="/movie/:id" component={Movie} exact/>

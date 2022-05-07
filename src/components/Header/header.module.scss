@@ -1,0 +1,17 @@
+.header{
+    padding: 25px 0;
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h2{
+        font-size: 32px;
+        font-weight: 600;
+    }
+    button{
+        outline: none;
+        background-color: transparent;
+        color:#fff;
+    }
+}
