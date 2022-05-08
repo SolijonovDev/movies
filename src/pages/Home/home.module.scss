@@ -1,13 +1,98 @@
-.items{
+.home{
     padding-top: 100px;
     padding-bottom: 80px;
-    .inner{
+    @media (max-width:1000px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media (max-width:600px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    &_top{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-bottom: 80px;
+        @media (max-width:600px) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+    }
+    &_name{
+        font-size: 40px;
+        color:#fff;
+        font-weight: 700;
+        margin: 0;
+        @media (max-width:600px) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    &_pagination{
+        color:#fff;
+    }
+    &_items{
+        display: flex;
+        justify-content:flex-start;
+        align-items: flex-start;
         flex-wrap: wrap;
+        margin-right: -20px;
+        // gap: 10px;
     }
-    .item{
-        width: 22%;
-        margin: 40px;
+}
+
+.item{
+    position: relative;
+    min-height: 250px;
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding:0 0 10px;
+    border-radius: 8px;
+    background-color: #16151a;
+    overflow: hidden;
+    @media (max-width:1300px) {
+        width: calc(25% - 20px);
     }
+    @media (max-width:1000px) {
+        width: calc(33.3% - 20px);
+    }
+    @media (max-width:750px) {
+        width: calc(50% - 20px);
+    }
+    @media (max-width:500px) {
+        width: calc(100%);
+    }
+    &_photo{
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        transition: transform 500ms ease;
+    }
+
+    h4{
+        font-size: 16px;
+        word-break: break-all;
+        padding: 10px 5px;
+        text-align: left;
+        color:#fff;
+        padding: 10px;
+        margin: 0;
+        height: 50px;
+    }
+    &:hover{
+        img{
+            transform: scale(1.2);
+        }
+        h4{
+            color:goldenrod;
+        }
+    }
+
 }

@@ -1,17 +1,29 @@
 .header{
-    padding: 25px 0;
+    padding: 20px 0;
     .inner{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    h2{
-        font-size: 32px;
-        font-weight: 600;
+    &_logo{
+        text-decoration: none;
+        color:#fff;
+        h2{
+            font-size: 52px;
+            font-weight: 700;
+            margin: 0;
+            @media (max-width:1000px) {
+                font-size: 45px;
+            }
+            @media (max-width:600px) {
+                font-size: 36px;
+            }
+        }
     }
-    button{
+    &_btn{
         outline: none;
         background-color: transparent;
-        color:#fff;
+        color:#fff !important;
+        font-size: 20px;
     }
 }

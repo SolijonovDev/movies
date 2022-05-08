@@ -1,44 +1,40 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
 import { fetchMovies } from "./../../store/actions/moviesActions";
 
 import s from "./home.module.scss";
 import PaginationControlled from "./../../components/Pagination/index";
+import { Item } from "./Item";
+import Loading from "../../components/Loading";
 
 export const Home = () => {
   const { movies, loading, page } = useSelector((state) => state.movies);
 
   const dispatch = useDispatch();
-  const history = useHistory();
   React.useEffect(() => {
-    dispatch(fetchMovies(page));
+    if (!loading) {
+      dispatch(fetchMovies(page));
+    }
   }, []);
 
-  if (loading) {
-    return (
-      <div>
-        <h2>Loading ... </h2>
-      </div>
-    );
-  }
   return (
-    <div className={s.items}>
+    <div className={s.home}>
       <div className="container">
         <div className={s.inner}>
-          {(movies.length || <div>Not films</div>) &&
-            movies.map((v) => (
-              <div
-                onClick={() => history.push(`/movie/${v.id}`)}
-                key={v.id}
-                className={s.item}
-              >
-                <img src={v.files.poster_url} alt="pho" />
-                <h4>{v.title}</h4>
-                <p>{v.year}</p>
-              </div>
-            ))}
-          <PaginationControlled />
+          <div className={s.home_top}>
+            <h2 className={s.home_name}>Filmlar</h2>
+            <div className={s.home_pagination}>
+              <PaginationControlled />
+            </div>
+          </div>
+          {loading ? (
+            <Loading />
+          ) : (
+            <div className={s.home_items}>
+              {(movies.length || <div>Not films</div>) &&
+                movies.map((v) => <Item movie={v} />)}
+            </div>
+          )}
         </div>
       </div>
     </div>

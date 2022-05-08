@@ -6,5 +6,16 @@ body {
 .container{
   width: 100%;
   max-width: 1400px;
+  padding: 0 15px;
   margin: 0 auto;
+  // border:1px solid blue;
+}
+
+
+.MuiPaginationItem-root{
+  color: #fff !important;
+}
+
+.Mui-selected{
+  background-color: blue !important;
 }

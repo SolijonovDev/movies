@@ -1,0 +1,77 @@
+.movie {
+    margin-top: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .movie .bar {
+    width: 12px;
+    height: 1px;
+    border-radius: 10px;
+    background-color: white;
+    animation: up_down 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes up_down {
+    0%,
+    100% {
+      height: 1px;
+    }
+    50% {
+      height: 100px;
+    }
+  }
+  
+  .movie .bar:nth-child(1) {
+    background-color: purple;
+    animation-delay: 1s;
+  }
+  
+  .movie .bar:nth-child(2) {
+    background-color: crimson;
+    animation-delay: 0.8s;
+  }
+  
+  .movie .bar:nth-child(3) {
+    background-color: deeppink;
+    animation-delay: 0.6s;
+  }
+  
+  .movie .bar:nth-child(4) {
+    background-color: orange;
+    animation-delay: 0.4s;
+  }
+  
+  .movie .bar:nth-child(5) {
+    background-color: gold;
+    animation-delay: 0.2s;
+  }
+  
+  .movie .bar:nth-child(6) {
+    background-color: gold;
+    animation-delay: 0.2s;
+  }
+  
+  .movie .bar:nth-child(7) {
+    background-color: orange;
+    animation-delay: 0.4s;
+  }
+  
+  .movie .bar:nth-child(8) {
+    background-color: deeppink;
+    animation-delay: 0.6s;
+  }
+  
+  .movie .bar:nth-child(9) {
+    background-color: crimson;
+    animation-delay: 0.8s;
+  }
+  
+  .movie .bar:nth-child(10) {
+    background-color: purple;
+    animation-delay: 1s;
+  }
