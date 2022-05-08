@@ -13,18 +13,17 @@ export default function PaginationControlled() {
   const handleChange = (event, value) => {
     dispatch(setPagination(+value));
     dispatch(fetchMovies(+value));
+    window.scrollTo(0,0);
   };
 
   return (
-    <Stack spacing={2}>
-      <Pagination
-        size="medium"
-        color="primary"
-        variant="text"
-        count={Math.ceil(total_items / items_per_page)}
-        page={page}
-        onChange={handleChange}
-      />
-    </Stack>
+    <Pagination
+      size="medium"
+      color="primary"
+      variant="text"
+      count={Math.ceil(total_items / items_per_page)}
+      page={page}
+      onChange={handleChange}
+    />
   );
 }

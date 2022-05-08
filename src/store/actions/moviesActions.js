@@ -7,7 +7,6 @@ export const fetchMovies = createAsyncThunk(
     'movies/fetchAll',
     async (id, thunk) => {
         try {
-            console.log("fetchmovie id",id);
             const response = await Api.getMovies(id)
             return response.data;
         } catch (e) {

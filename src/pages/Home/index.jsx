@@ -21,20 +21,18 @@ export const Home = () => {
     <div className={s.home}>
       <div className="container">
         <div className={s.inner}>
-          <div className={s.home_top}>
-            <h2 className={s.home_name}>Filmlar</h2>
-            <div className={s.home_pagination}>
-              <PaginationControlled />
-            </div>
-          </div>
+          <h2 className={s.home_name}>Filmlar</h2>
           {loading ? (
             <Loading />
           ) : (
             <div className={s.home_items}>
               {(movies.length || <div>Not films</div>) &&
-                movies.map((v) => <Item key={v.id+v.title} movie={v} />)}
+                movies.map((v) => <Item key={v.id + v.title} movie={v} />)}
             </div>
           )}
+          <div className={s.home_pagination}>
+            <PaginationControlled />
+          </div>
         </div>
       </div>
     </div>

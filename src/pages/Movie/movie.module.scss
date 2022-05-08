@@ -11,6 +11,59 @@
             margin-bottom: 40px;
         }
     }
+    &_video{
+        width: 100%;
+        height: 500px;
+        margin-bottom: 50px;
+        position: relative;
+        @media (max-width:1000px) {
+            height: 400px;
+        }
+        @media (max-width:1000px) {
+            height: 350px;
+        }
+        &::after{
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            background-image: url("http://www.downloadclipart.net/large/youtube-play-button-png-file.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 150px;
+            height: 150px;
+            top: calc(50% - 75px);
+            left: calc(50% - 75px);
+            z-index: 100;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        &.play{
+            img{
+                display: none;
+            }
+            &::after{
+                display: none;
+            }
+        }
+       
+    }
+    &_player{
+        width: 100%;
+        height: 100%;
+    }
+
+
     &_info{
         display: flex;
         justify-content: flex-start;
@@ -28,6 +81,10 @@
         height: 400px;
         @media (max-width:600px) {
             width: 100%;
+            height: 300px;
+        }
+        @media (max-width:600px) {
+            height: 200px;
         }
         img{
             width: 100%;
@@ -45,7 +102,7 @@
         h2{
             text-align: left;
             font-size: 28px;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 15px;
             color:#fff;
         }

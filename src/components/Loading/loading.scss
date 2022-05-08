@@ -1,5 +1,11 @@
+.loading{
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .movie {
-    margin-top: 100px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;

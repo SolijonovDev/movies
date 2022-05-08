@@ -9,37 +9,33 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
-    &_top{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 80px;
-        @media (max-width:600px) {
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 40px;
-        }
-    }
     &_name{
         font-size: 40px;
         color:#fff;
         font-weight: 700;
-        margin: 0;
+        margin-bottom: 30px;
         @media (max-width:600px) {
             font-size: 30px;
-            margin-bottom: 30px;
         }
     }
-    &_pagination{
-        color:#fff;
-    }
+   
     &_items{
         display: flex;
         justify-content:flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
         margin-right: -20px;
-        // gap: 10px;
+        overflow: hidden;
+    }
+    &_pagination{
+        text-align: center;
+        color:#fff;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        
     }
 }
 
