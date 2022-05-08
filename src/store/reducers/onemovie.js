@@ -3,11 +3,11 @@ import { fetchOneMovie } from "./../actions/onemovieActions";
 
 const initialState = {
   loading: false,
-  id: 0,
-  title: "",
+  files: {},
+  name: "",
+  desc:"",
   year: 0,
   countries: "",
-  files: {},
 };
 
 const movieReducer = createSlice({
@@ -17,11 +17,11 @@ const movieReducer = createSlice({
 
   extraReducers: (builder) => {
     builder.addCase(fetchOneMovie.fulfilled, (state, action) => {
-      console.log(action.payload);
       const res = action.payload.movie;
-      state.id = res.id;
-      state.title = res.title;
+      state.name = res.title;
+      state.desc=res.description;
       state.year = res.year;
+      state.countries=res.countries_str;
       state.files = res.files;
       state.loading = false;
     });

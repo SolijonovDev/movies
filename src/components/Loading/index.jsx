@@ -3,17 +3,17 @@ import './loading.scss'
 
 export default function Loading() {
   return (
-    <div class='movie'>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
-    <div class='bar'></div>
+    <div className='movie'>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
+    <div className='bar'></div>
   </div>
   );
 }

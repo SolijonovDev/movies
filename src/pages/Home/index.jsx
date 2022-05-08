@@ -32,7 +32,7 @@ export const Home = () => {
           ) : (
             <div className={s.home_items}>
               {(movies.length || <div>Not films</div>) &&
-                movies.map((v) => <Item movie={v} />)}
+                movies.map((v) => <Item key={v.id+v.title} movie={v} />)}
             </div>
           )}
         </div>

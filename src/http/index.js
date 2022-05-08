@@ -9,7 +9,6 @@ const $api=axios.create({
 
 class Api{
     async getMovies(id){
-        console.log("id:",id);
        const res=await $api.get(`content/main/2/list?page=${id}&user=${token}`)
        return res;
     }
